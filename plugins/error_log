@@ -1,0 +1,2 @@
+[06-May-2015 00:08:12 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/tinnguye/public_html/tinnguyen.me/wp-content/plugins/hello.php on line 60
+[06-May-2015 04:13:52 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/tinnguye/public_html/tinnguyen.me/wp-content/plugins/hello.php on line 60
