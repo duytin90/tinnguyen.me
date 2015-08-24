@@ -43,8 +43,6 @@ class GADWP_Install {
 			$options['ga_tracking_code'] = '';
 			$options['ga_enhanced_links'] = 0;
 			$options['ga_dash_remarketing'] = 0;
-			$options['ga_dash_default_metric'] = 'sessions';
-			$options['ga_dash_default_dimension'] = '30daysAgo';
 			$options['ga_dash_frontend_stats'] = 0;
 			$options['ga_dash_network'] = 0;
 			$options['ga_dash_adsense'] = 0;
@@ -62,6 +60,7 @@ class GADWP_Install {
 			$options['backend_item_reports'] = 1;
 			$options['frontend_item_reports'] = 0;
 			$options['dashboard_widget'] = 1;
+			$options['api_backoff'] = 0;
 		} else {
 			$options = array();
 			$options['ga_dash_apikey'] = get_option( 'ga_dash_apikey' );
@@ -96,8 +95,6 @@ class GADWP_Install {
 			$options['ga_dash_frontend_keywords'] = 0;
 			$options['ga_enhanced_links'] = 0;
 			$options['ga_dash_remarketing'] = 0;
-			$options['ga_dash_default_metric'] = 'sessions';
-			$options['ga_dash_default_dimension'] = '30daysAgo';
 			$options['ga_dash_network'] = 0;
 			$options['ga_event_bouncerate'] = 0;
 			$options['ga_crossdomain_tracking'] = 0;
@@ -112,6 +109,7 @@ class GADWP_Install {
 			$options['backend_item_reports'] = 1;
 			$options['frontend_item_reports'] = 0;
 			$options['dashboard_widget'] = 1;
+			$options['api_backoff'] = 0;
 
 			delete_option( 'ga_dash_apikey' );
 			delete_option( 'ga_dash_clientid' );

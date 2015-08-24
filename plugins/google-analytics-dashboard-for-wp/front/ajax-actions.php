@@ -43,13 +43,7 @@ if ( ! class_exists( 'GADWP_Frontend_Ajax' ) ) {
 			$from = $_REQUEST['from'];
 			$to = $_REQUEST['to'];
 			$query = $_REQUEST['query'];
-			$uri = $_REQUEST['uri'];
-
-			$uri = '/' . ltrim($uri,'/');
-
-			// allow URL correction before sending an API request
-			$filter = apply_filters( 'gadwp_frontenditem_uri', $uri );
-			$filter = rawurlencode( rawurldecode( $filter ) );
+			$uri = $_REQUEST['filter'];
 
 			$query = $_REQUEST['query'];
 			if ( ob_get_length() ) {
@@ -81,6 +75,20 @@ if ( ! class_exists( 'GADWP_Frontend_Ajax' ) ) {
 			} else {
 				$this->gadwp->gapi_controller->timeshift = (int) current_time( 'timestamp' ) - time();
 			}
+
+			$uri = '/' . ltrim($uri,'/');
+
+			// allow URL correction before sending an API request
+			$filter = apply_filters( 'gadwp_frontenditem_uri', $uri );
+
+			$lastchar = substr( $filter, - 1 );
+
+			if ( isset( $profile_info[6] ) && $profile_info[6] && $lastchar == '/' ) {
+				$filter = $filter . $profile_info[6];
+			}
+
+			// Encode URL
+			$filter = rawurlencode( rawurldecode( $filter ) );
 
 			$queries = explode( ',', $query );
 
