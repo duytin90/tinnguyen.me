@@ -11,3 +11,13 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  tinnguyen
 */
+.entry-content .code {
+	display: block;
+	color: #393318;
+	overflow: auto;
+	font-size: 13px;
+	padding: 5px;
+	width: auto;
+	background-color: #eee;
+	margin-bottom: 1em;
+}
