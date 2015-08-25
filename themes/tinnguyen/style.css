@@ -11,6 +11,11 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  tinnguyen
 */
+.entry-content pre {
+	padding: 0;
+	border: none;
+}
+
 .entry-content code {
 	color: #393318;
 	overflow: auto;
